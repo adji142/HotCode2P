@@ -1,0 +1,33 @@
+<html lang="{{ app()->getLocale() }}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>SAS Paycoll</title>
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+        <link href="{{asset('css/app.css')}}" rel="stylesheet" type="text/css">
+        <link href="{{asset('css/all.css')}}" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
+        <link href="https://unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet">
+        <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script> 
+        <style type="text/css">
+        .form-signin input[type="text"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+        </style>
+    </head>
+    <body>
+        <div id="app">
+        </div>
+         <script>
+           window.Laravel = <?php echo json_encode([
+               'csrfToken' => csrf_token(),
+                    ]); ?>
+          </script>
+       <script src="{{asset('js/app.js')}}"></script>
+       <script src="https://unpkg.com/vuetify/dist/vuetify.js"></script> 
+    </body>
+</html>
